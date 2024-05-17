@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+
+<body>
+    <div class="side_panel">
+        <button class="panel_link" onClick="openPanel(event, 'NITK')" id="defaultOpen">
+            <h2>National Institute of Technology Karnataka, Surathkal</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'BMS')">
+            <h2>B.M.S College of Engineering, Bangalore</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'CJC')">
+            <h2>Christ Junior College</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'NHPS')">
+            <h2>New Horizon Public School</h2>
+        </button>
+    </div>
+
+    <div class="main_panel" id="NITK">
+        <div class="headingBottomBorder">
+            <h1>National Institute of Technology Karnataka, Surathkal</h1>
+        </div>
+        <h2>Mtech - Mechatronics Engineering</h2>
+        <h3>2020 - 2022</h3>
+        <p>CGPA - 8.24/10</p>
+        <h2>Course Work</h2>
+        <ul>
+            <li>Automotive Electronics</li>
+            <li>Micro-Electro-Mechanical Systems Design</li>
+            <li>Intelligent Systems</li>
+            <li>Automation System and Internet of Things</li>
+            <li>Virtual Instrumentation</li>
+            <li>Microcontroller Lab</li>
+            <li>Sensors and Signal Conditioning</li>
+            <li>Actuators and Control</li>
+            <li>Control Engineering</li>
+            <li>Product Design and Development</li>
+        </ul>
+    </div>
+
+    <div class="main_panel" id="BMS">
+        <div class="headingBottomBorder">
+            <h1>B.M.S College of Engineering, Bangalore</h1>
+        </div>
+        <h2>BE - Mechanical Engineering</h2>
+        <h3>2015 - 2019</h3>
+        <p>CGPA - 7.91/10</p>
+        <h2>Course Work</h2>
+        <ul>
+            <li>Programming in Python</li>
+            <li>Cloud Computing</li>
+            <li>Strength of Materials</li>
+            <li>Thermodynamics</li>
+            <li>Fluid Mechanics</li>
+            <li>Manufacturing</li>
+            <li>Theory of Machines</li>
+        </ul>
+    </div>
+
+    <div class="main_panel" id="CJC">
+        <div class="headingBottomBorder">
+            <h1>Christ Junior College, Bangalore</h1>
+        </div>
+        <h2>Pre University</h2>
+        <h3>2013 - 2015</h3>
+        <p>86%</p>
+        <h2>Course Work</h2>
+        <ul>
+            <li>Physics</li>
+            <li>Chemistry</li>
+            <li>Mathematics</li>
+            <li>Biology</li>
+        </ul>
+    </div>
+
+    <div class="main_panel" id="NHPS">
+        <div class="headingBottomBorder">
+            <h1>New Horizon Public School, Bangalore</h1>
+        </div>
+        <h2>Matriculation - ICSE</h2>
+        <h3>2000 - 2013</h3>
+        <p>88%</p>
+        <h2>Course Work</h2>
+        <ul>
+            <li>English</li>
+            <li>Kannada</li>
+            <li>Physics</li>
+            <li>Chemistry</li>
+            <li>Mathematics</li>
+            <li>Biology</li>
+            <li>Social Science</li>
+            <li>Computer Applications</li>
+        </ul>
+    </div>
+
+    <script>
+        function openPanel(evt, panelName) {
+            var i, main_panel, panel_link;
+            main_panel = document.getElementsByClassName("main_panel");
+            for (i = 0; i < main_panel.length; i++) {
+                main_panel[i].style.display = "none";
+            }
+            panel_link = document.getElementsByClassName("panel_link");
+            for (i = 0; i < panel_link.length; i++) {
+                panel_link[i].className = panel_link[i].className.replace(" active", "");
+            }
+            document.getElementById(panelName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>

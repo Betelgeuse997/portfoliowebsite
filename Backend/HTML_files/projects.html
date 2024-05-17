@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+
+<body>
+    <div class="side_panel">
+        <button class="panel_link" onClick="openPanel(event, 'BP')" id="defaultOpen">
+            <h2>BlogsPost</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'PG')">
+            <h2>A Machine Learning Approach for Melt Pool Optimisation of Laser based Additive Manufacturing Process</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'UG')">
+            <h2>Analysis of Composite Shaft with Grooved Flange under Torsion</h2>
+        </button>
+    </div>
+    <div class="main_panel" id="BP">
+        <div class="headingBottomBorder">
+        <h1>BlogsPost</h1>
+    </div>
+        <a href="https://projectsbyvishnu.com/">BlogsPost</a>
+        <h2>Personal Project</h2>
+        <ul>
+            <li>Technology stack used: MongoDB, NodeJS, ReactJS, ExpressJS</li>
+            <li>Create and Publish Blogs: Users can create and publish their own blog posts with rich text editing features</li>
+            <li>Explore and Discover: Browse through a diverse range of blog posts created by other users.</li>
+            <li>Engagement: Like yourfavorite blog posts to engage with the community.</li>
+            <li>Authentication and Authorization: Secure user authentication and authorization using JSON Web Tokens (JWT) ensure data privacy and integrity.</li>
+            <li>Search Functionality: Find specific blog posts or topics quickly and efficiently with the built-in search functionality</li>
+        </ul>
+    </div>
+    <div class="main_panel" id="PG">
+        <div class="headingBottomBorder">
+        <h1>A Machine Learning Approach for Melt Pool Optimisation of Laser based Additive Manufacturing Process</h1>
+    </div>
+        <h2>Postgraduate Research Project</h2>
+        <h3>Jun 2021 - Jun 2022</h3>
+        <p>Worked underthe guidance of Prof Dr Srikanth Bontha to develop a machine learning model for improving melt
+            pool characteristics by optimising process parameters of laser based metal additive manufacturing.</p>
+    </div>
+    <div class="main_panel" id="UG">
+        <div class="headingBottomBorder">
+        <h1>Analysis of Composite Shaft with Grooved Flange under Torsion</h1>
+    </div>
+        <h2>Undergraduate Project</h2>
+        <h3>Jun 2018 - Jun 2019</h3>
+        <p>Torsional test was done and compared on both the physical model and ANSYS model and the best model was
+            considered among different models for varying number of grooves and the depth of cut.</p>
+    </div>
+    <script>
+        function openPanel(evt, panelName) {
+            var i, main_panel, panel_link;
+            main_panel = document.getElementsByClassName("main_panel");
+            for (i = 0; i < main_panel.length; i++) {
+                main_panel[i].style.display = "none";
+            }
+            panel_link = document.getElementsByClassName("panel_link");
+            for (i = 0; i < panel_link.length; i++) {
+                panel_link[i].className = panel_link[i].className.replace(" active", "");
+            }
+            document.getElementById(panelName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

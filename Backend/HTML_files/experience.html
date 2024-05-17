@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+
+<body>
+    <div class="side_panel">
+        <button class="panel_link" onClick="openPanel(event, 'AUE')" id="defaultOpen">
+            <h2>AlgoUniversity Externship</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'CTS')">
+            <h2>Cognizant Technology Solutions</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'DRDO')">
+            <h2>Defence Research and Development Organization - Gas Turbine Research Establishment</h2>
+        </button>
+        <button class="panel_link" onClick="openPanel(event, 'HAL')">
+            <h2>Hindustan Aeronautics Limited</h2>
+        </button>
+    </div>
+
+    <div class="main_panel" id="AUE">
+        <div class="headingBottomBorder">
+        <h1>AlgoUniversity Externship</h1>
+    </div>
+        <h3>Jan 2024 – Present</h3>
+        <h2>Online Judge Project</h2>
+        <ul>
+            <li>Technology stack used: MongoDB, NodeJS, ReactJS, ExpressJS</li>
+            <li>User Authentication - Based on JWT (JSON Web Token) access, ensuring secure and seamless userinteractions</li>
+            <li>Question Management - Add/Edit/Delete/View questions effortlessly, providing a dynamic and user-friendly interface.</li>
+            <li>Multilingual Support - Introduced a feature allowing users to submit code solutions in Java, Python, or C++</li>
+            <li>Docker Deployment - Leveraged Docker to containerize and deploy the backend server, enhancing scalability, portability, and ease of maintenance</li>
+            <li>Deployment Architecture - Deployed the client-side application on Vercel and utilized Amazon Web Services (AWS) infrastructure for virtual servers deployment in EC2 instances.</li>
+        </ul>
+    </div>
+
+    <div class="main_panel" id="CTS">
+        <div class="headingBottomBorder">
+        <h1>Cognizant Technology Solutions</h1>
+    </div>
+        <h2>Associate</h2>
+        <h3>Jul 2022 - Dec 2023</h3>
+        <p>Bangalore, Karnataka</p>
+        <ul>
+            <li>1.5 years experience in hands-on, multitasking and troubleshooting in Axway Secure Transport</li>
+            <li>Experience in file transfer protocols such as FTP/s, SSH, HTTP/s, S3, SMB, Sharepoint</li>
+            <li>Configuration of SSH authentication keys and PGP Encryption Decryption keys</li>
+            <li>Monitoring file flows in Production and act accordingly</li>
+            <li>Incident and Change Management in Service Now</li>
+        </ul>
+    </div>
+
+    <div class="main_panel" id="DRDO">
+        <div class="headingBottomBorder">
+        <h1>Defence Research and Development Organization - Gas Turbine Research Establishment</h1>
+    </div>
+        <h2>Research Intern</h2>
+        <h3>Jun 2018 - Jul 2018</h3>
+        <p>Bangalore, Karnataka</p>
+        <ul>
+            <li>Visited the facility to gain insights on the technology employed in the Gas Turbines Development.</li>
+            <li>Completed an internship training programme in the Vibration Engineering Group in GTRE (DRDO)</li>
+            <li>Performed Modal analysis of cantilever beam to study the effect of bolt pretension on vibration frequency</li>
+        </ul>
+    </div>
+
+    <div class="main_panel" id="HAL">
+        <div class="headingBottomBorder">
+        <h1>Hindustan Aeronautics Limited</h1>
+    </div>
+        <h2>Intern</h2>
+        <h3>Jun 2017 - Jul 2017</h3>
+        <p>88%</p>
+        <h2>Bangalore, Karnataka</h2>
+        <ul>
+            <li>Completed In-Plant Training on Basic Design of Compositesat MCSRDC, Design Complex, HAL</li>
+        </ul>
+    </div>
+    <script>
+        function openPanel(evt, panelName) {
+            var i, main_panel, panel_link;
+            main_panel = document.getElementsByClassName("main_panel");
+            for (i = 0; i < main_panel.length; i++) {
+                main_panel[i].style.display = "none";
+            }
+            panel_link = document.getElementsByClassName("panel_link");
+            for (i = 0; i < panel_link.length; i++) {
+                panel_link[i].className = panel_link[i].className.replace(" active", "");
+            }
+            document.getElementById(panelName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
