@@ -33,6 +33,20 @@ p {
   color: antiquewhite;
 }
 
+content {
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 90px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 700px;
+  border: 1px;
+  border-top: none;
+  /* position: relative; */
+  width: 100%;
+  text-align: center;
+}
+
 portfolio {
   display: block;
   text-align: center;
@@ -40,26 +54,19 @@ portfolio {
   padding-bottom: 90px;
   padding-left: 12px;
   padding-right: 12px;
-  height: 1500px;
+  height: 1600px;
   position: relative;
   top: 5%;
 }
 
 blogspost {
-  position: absolute;
-  left: 800px;
-  text-align: left;
-  float: right;
-  width: 600px;
+  display: block;
+  height: 700px;
 }
 
-onlineJudge {
-  position: absolute;
-  top: 950px;
-  left: 75px;
-  text-align: left;
-  float: right;
-  width: 600px;
+codersarena {
+  display: block;
+  height: 700px;
 }
 
 skills {
@@ -69,7 +76,7 @@ skills {
   padding-bottom: 30px;
   padding-left: 12px;
   padding-right: 12px;
-  height: 800px;
+  height: 1000px;
   position: relative;
   top: 5%;
 }
@@ -209,11 +216,14 @@ a {
 }
 
 #prfimg {
-  position: absolute;
+  width: 375px;
+  display: inline-block;
+  /* position: absolute;
   top: 200px;
-  left: 120px;
-  float: right;
+  left: 120px; */
   border-radius: 20px;
+  margin-right: 50px;
+  margin-bottom: 50px;
   /* border: 2px solid #EBCBAD; */
   box-shadow: 20px 20px 0 -10px #01001c, 20px 20px 0px 1px rgb(57, 118, 248);
 }
@@ -247,17 +257,7 @@ a {
 } */
 
 /* Style the tab content */
-.content {
-  display: block;
-  padding-top: 50px;
-  padding-bottom: 90px;
-  padding-left: 12px;
-  padding-right: 12px;
-  height: 700px;
-  border: 1px;
-  border-top: none;
-  position: relative;
-}
+
 
 .side_panel {
   float: left;
@@ -307,17 +307,14 @@ a {
   color: rgb(0, 44, 139);
 }
 
-img #prfimg {
-  position: absolute;
-}
-
 #about {
   /* padding: 20px 12px; */
-  position: absolute;
-  left: 800px;
+  /* position: absolute;
+  left: 800px; */
+  display: inline-block;
+  margin-left: 50px;
   text-align: center;
-  float: right;
-  width: 600px;
+  width: 550px;
 }
 
 .contactdetails {
@@ -420,7 +417,7 @@ skills h2 {
 
 .gallery img {
   padding: 5px 20px;
-  width: 10%;
+  width: 150px;
 }
 
 .footer {
@@ -442,7 +439,7 @@ skills h2 {
 
 #linkedinid {
   float: right;
-  width: 3%;
+  width: 40px;
   margin-right: 70px;
 }
 
@@ -516,37 +513,58 @@ input:focus {
   background-image: linear-gradient(240deg, rgb(101, 31, 253), rgb(85, 30, 204));
 }
 
-/* #blogspost {
+#CodersArena {
   display: block;
-} */
+  height: 700px;
+}
 
 #blogspostimg {
-  position: absolute;
+  /* position: absolute;
   left: 150px;
-  top: 400px;
+  top: 400px; */
+  display: inline-block;
+  place-content: center;
   border-radius: 20px;
+  width: 500px;
+  margin-bottom: 140px;
   /* border: 2px solid #EBCBAD; */
   box-shadow: 20px 20px 0 -10px #01001c, 20px 20px 0px 1px rgb(57, 118, 248);
   /* float: left; */
 }
 
-/* #blogspostdescription {
+#blogspostdescription {
+    /* position: absolute;
+  left: 800px; */
+  text-align: left;
+  /* float: right; */
   display: inline-block;
-} */
+  width: 550px;
+  margin-left: 60px;
+}
 /* #CodersArena {
   display: block;
 } */
 
 #CodersArenaimg {
-  position: absolute;
+  /* position: absolute;
   right: 100px;
-  top: 1050px;
+  top: 1050px; */
+  display: inline-block;
   border-radius: 20px;
+  width: 500px;
+  margin-bottom: 100px;
   /* border: 2px solid #EBCBAD; */
   box-shadow: 20px 20px 0 -10px #01001c, 20px 20px 0px 1px rgb(57, 118, 248);
   /* float: right; */
 }
 
-/* #CodersArenadescription {
+#CodersArenadescription {
   display: inline-block;
-} */
+    /* position: absolute;
+  top: 950px;
+  left: 75px; */
+  text-align: left;
+  /* float: left; */
+  width: 550px;
+  margin-right: 60px;
+}
